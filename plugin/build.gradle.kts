@@ -9,9 +9,20 @@
 plugins {
     // Apply the Java Gradle plugin development plugin to add support for developing Gradle plugins
     `java-gradle-plugin`
+    `maven-publish`
 
     // Apply the Kotlin JVM plugin to add support for Kotlin.
     alias(libs.plugins.kotlin.jvm)
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
+}
+
+kotlin {
+    jvmToolchain(21)
 }
 
 repositories {
@@ -47,11 +58,17 @@ testing {
     }
 }
 
+group = "io.smokedsalmon"
+version = "1.0.0"
+
 gradlePlugin {
-    // Define the plugin
-    val greeting by plugins.creating {
-        id = "org.example.greeting"
-        implementationClass = "org.example.LibraryConsumerMigratorPlugin"
+    plugins {
+        create("libraryConsumerMigrator") {
+            id = "io.smokedsalmon.library-consumer-migrator"
+            implementationClass = "io.smokedsalmon.libraryconsumermigrator.LibraryConsumerMigratorPlugin"
+            displayName = "Library Consumer Migrator"
+            description = "Migrates a consumer application into a library project for real-world testing and development"
+        }
     }
 }
 
