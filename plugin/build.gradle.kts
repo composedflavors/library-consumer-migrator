@@ -58,14 +58,14 @@ testing {
     }
 }
 
-group = "io.smokedsalmon"
-version = "1.0.0"
+group = "io.composedflavors"
+version = "0.0.1-alpha"
 
 gradlePlugin {
     plugins {
         create("libraryConsumerMigrator") {
-            id = "io.smokedsalmon.library-consumer-migrator"
-            implementationClass = "io.smokedsalmon.libraryconsumermigrator.LibraryConsumerMigratorPlugin"
+            id = "io.composedflavors.library-consumer-migrator"
+            implementationClass = "io.composedflavors.libraryconsumermigrator.LibraryConsumerMigratorPlugin"
             displayName = "Library Consumer Migrator"
             description = "Migrates a consumer application into a library project for real-world testing and development"
         }

@@ -1,13 +1,10 @@
-package io.smokedsalmon.libraryconsumermigrator.task
+package io.composedflavors.libraryconsumermigrator.task
 
-import io.smokedsalmon.libraryconsumermigrator.LibraryConsumerMigratorExtension
-import io.smokedsalmon.libraryconsumermigrator.executor.MigrationExecutor
+import io.composedflavors.libraryconsumermigrator.LibraryConsumerMigratorExtension
+import io.composedflavors.libraryconsumermigrator.executor.MigrationExecutor
 import org.gradle.api.DefaultTask
 import org.gradle.api.GradleException
-import org.gradle.api.provider.Property
-import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.Internal
-import org.gradle.api.tasks.Optional
 import org.gradle.api.tasks.TaskAction
 
 /**

@@ -1,8 +1,7 @@
-package io.smokedsalmon.libraryconsumermigrator.operations
+package io.composedflavors.libraryconsumermigrator.operations
 
 import org.gradle.api.Project
 import org.gradle.api.logging.Logger
-import java.io.File
 
 /**
  * Handles file system operations for cleaning up standalone project files.

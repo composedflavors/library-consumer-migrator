@@ -1,4 +1,4 @@
-package io.smokedsalmon.libraryconsumermigrator
+package io.composedflavors.libraryconsumermigrator
 
 import org.gradle.api.provider.ListProperty
 import org.gradle.api.provider.Property

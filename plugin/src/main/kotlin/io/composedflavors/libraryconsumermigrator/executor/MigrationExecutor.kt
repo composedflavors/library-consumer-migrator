@@ -1,9 +1,9 @@
-package io.smokedsalmon.libraryconsumermigrator.executor
+package io.composedflavors.libraryconsumermigrator.executor
 
-import io.smokedsalmon.libraryconsumermigrator.operations.DependencyMerger
-import io.smokedsalmon.libraryconsumermigrator.operations.FileOperations
-import io.smokedsalmon.libraryconsumermigrator.operations.GitOperations
-import io.smokedsalmon.libraryconsumermigrator.operations.ProjectUpdater
+import io.composedflavors.libraryconsumermigrator.operations.DependencyMerger
+import io.composedflavors.libraryconsumermigrator.operations.FileOperations
+import io.composedflavors.libraryconsumermigrator.operations.GitOperations
+import io.composedflavors.libraryconsumermigrator.operations.ProjectUpdater
 import org.gradle.api.Project
 import org.gradle.api.logging.Logger
 
@@ -16,7 +16,8 @@ class MigrationExecutor(
 ) {
     private val gitOperations = GitOperations(project, logger)
     private val fileOperations = FileOperations(project, logger)
-    private val dependencyMerger = DependencyMerger(project, logger)
+    private val dependencyMerger =
+        DependencyMerger(project, logger)
     private val projectUpdater = ProjectUpdater(project, logger)
 
     /**

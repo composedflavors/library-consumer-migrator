@@ -1,4 +1,4 @@
-package io.smokedsalmon.libraryconsumermigrator.parser
+package io.composedflavors.libraryconsumermigrator.parser
 
 import java.io.File
 
