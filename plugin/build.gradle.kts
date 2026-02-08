@@ -13,6 +13,7 @@ plugins {
 
     // Apply the Kotlin JVM plugin to add support for Kotlin.
     alias(libs.plugins.kotlin.jvm)
+    id("com.gradle.plugin-publish") version "1.3.0"
 }
 
 java {
@@ -62,12 +63,25 @@ group = "io.composedflavors"
 version = "0.0.1-alpha"
 
 gradlePlugin {
+    website = "https://github.com/composedflavors/library-consumer-migrator"
+    vcsUrl = "https://github.com/composedflavors/library-consumer-migrator.git"
+
     plugins {
         create("libraryConsumerMigrator") {
             id = "io.composedflavors.library-consumer-migrator"
             implementationClass = "io.composedflavors.libraryconsumermigrator.LibraryConsumerMigratorPlugin"
             displayName = "Library Consumer Migrator"
-            description = "Migrates a consumer application into a library project for real-world testing and development"
+            description = "Gradle plugin that automates migration of consumer applications as Git submodules into library projects for streamlined testing and development in unified workspace"
+
+            tags = listOf(
+                "submodule",
+                "git",
+                "library",
+                "testing",
+                "kmp",
+                "kotlin-multiplatform",
+                "development-tools"
+            )
         }
     }
 }
@@ -77,4 +91,24 @@ gradlePlugin.testSourceSets.add(sourceSets["functionalTest"])
 tasks.named<Task>("check") {
     // Include functionalTest as part of the check lifecycle
     dependsOn(testing.suites.named("functionalTest"))
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("pluginMaven") {
+            groupId = "io.composedflavors"
+            artifactId = "library-consumer-migrator"
+            version = "0.0.1-alpha"
+        }
+    }
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/composedflavors/library-consumer-migrator")
+            credentials {
+                username = System.getenv("GITHUB_FLAVOURS_ACTOR")
+                password = System.getenv("GITHUB_FLAVOURS_TOKEN")
+            }
+        }
+    }
 }
