@@ -1,7 +1,7 @@
 package io.github.yuriikyry4enko.libraryconsumermigrator.task
 
-import io.composedflavors.libraryconsumermigrator.LibraryConsumerMigratorExtension
-import io.composedflavors.libraryconsumermigrator.executor.MigrationExecutor
+import io.github.yuriikyry4enko.libraryconsumermigrator.LibraryConsumerMigratorExtension
+import io.github.yuriikyry4enko.libraryconsumermigrator.executor.MigrationExecutor
 import org.gradle.api.DefaultTask
 import org.gradle.api.GradleException
 import org.gradle.api.tasks.Internal
