@@ -59,7 +59,7 @@ testing {
     }
 }
 
-group = "io.composedflavors"
+group = "io.github.yuriikyry4enko"
 version = "0.0.1-alpha"
 
 gradlePlugin {
@@ -68,8 +68,8 @@ gradlePlugin {
 
     plugins {
         create("libraryConsumerMigrator") {
-            id = "io.composedflavors.library-consumer-migrator"
-            implementationClass = "io.composedflavors.libraryconsumermigrator.LibraryConsumerMigratorPlugin"
+            id = "io.github.yuriikyry4enko.library-consumer-migrator"
+            implementationClass = "io.github.yuriikyry4enko.libraryconsumermigrator.LibraryConsumerMigratorPlugin"
             displayName = "Library Consumer Migrator"
             description = "Gradle plugin that automates migration of consumer applications as Git submodules into library projects for streamlined testing and development in unified workspace"
 
@@ -96,7 +96,7 @@ tasks.named<Task>("check") {
 publishing {
     publications {
         create<MavenPublication>("pluginMaven") {
-            groupId = "io.composedflavors"
+            groupId = "io.github.yuriikyry4enko"
             artifactId = "library-consumer-migrator"
             version = "0.0.1-alpha"
         }

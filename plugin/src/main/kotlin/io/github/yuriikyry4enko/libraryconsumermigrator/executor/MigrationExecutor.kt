@@ -1,9 +1,9 @@
-package io.composedflavors.libraryconsumermigrator.executor
+package io.github.yuriikyry4enko.libraryconsumermigrator.executor
 
-import io.composedflavors.libraryconsumermigrator.operations.DependencyMerger
-import io.composedflavors.libraryconsumermigrator.operations.FileOperations
-import io.composedflavors.libraryconsumermigrator.operations.GitOperations
-import io.composedflavors.libraryconsumermigrator.operations.ProjectUpdater
+import io.github.yuriikyry4enko.libraryconsumermigrator.operations.DependencyMerger
+import io.github.yuriikyry4enko.libraryconsumermigrator.operations.FileOperations
+import io.github.yuriikyry4enko.libraryconsumermigrator.operations.GitOperations
+import io.github.yuriikyry4enko.libraryconsumermigrator.operations.ProjectUpdater
 import org.gradle.api.Project
 import org.gradle.api.logging.Logger
 
@@ -14,11 +14,14 @@ class MigrationExecutor(
     private val project: Project,
     private val logger: Logger
 ) {
-    private val gitOperations = GitOperations(project, logger)
-    private val fileOperations = FileOperations(project, logger)
+    private val gitOperations =
+        GitOperations(project, logger)
+    private val fileOperations =
+        FileOperations(project, logger)
     private val dependencyMerger =
         DependencyMerger(project, logger)
-    private val projectUpdater = ProjectUpdater(project, logger)
+    private val projectUpdater =
+        ProjectUpdater(project, logger)
 
     /**
      * Executes the full migration process.

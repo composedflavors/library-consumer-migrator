@@ -1,4 +1,4 @@
-package io.composedflavors.libraryconsumermigrator.parser
+package io.github.yuriikyry4enko.libraryconsumermigrator.parser
 
 import java.io.File
 

@@ -1,4 +1,4 @@
-package io.composedflavors.libraryconsumermigrator.task
+package io.github.yuriikyry4enko.libraryconsumermigrator.task
 
 import io.composedflavors.libraryconsumermigrator.LibraryConsumerMigratorExtension
 import io.composedflavors.libraryconsumermigrator.executor.MigrationExecutor

@@ -1,4 +1,4 @@
-package io.composedflavors.libraryconsumermigrator
+package io.github.yuriikyry4enko.libraryconsumermigrator
 
 import org.gradle.api.provider.ListProperty
 import org.gradle.api.provider.Property
