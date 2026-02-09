@@ -63,8 +63,8 @@ group = "io.github.yuriikyry4enko"
 version = "0.0.1-alpha"
 
 gradlePlugin {
-    website = "https://github.com/composedflavors/library-consumer-migrator"
-    vcsUrl = "https://github.com/composedflavors/library-consumer-migrator.git"
+    website = "https://github.com/yuriikyry4enko/library-consumer-migrator"
+    vcsUrl = "https://github.com/yuriikyry4enko/library-consumer-migrator.git"
 
     plugins {
         create("libraryConsumerMigrator") {
@@ -104,7 +104,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/composedflavors/library-consumer-migrator")
+            url = uri("https://maven.pkg.github.com/yuriikyry4enko/library-consumer-migrator")
             credentials {
                 username = System.getenv("GITHUB_FLAVOURS_ACTOR")
                 password = System.getenv("GITHUB_FLAVOURS_TOKEN")
